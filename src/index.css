@@ -1,13 +1,285 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Tapestry&display=swap');
+
+/* Reset */
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: 0;
+  list-style: none;
+  text-decoration: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Variables */
+
+:root {
+  /* Colors */
+  --bgColor: rgb(38, 38, 38);
+  --txtColor: #eeee;
+
+  /* Fonts */
+  --mainFont: 'Radio Canada', sans-serif;
+  --main400: 400;
+  --main300: 300;
+  --main600: 600;
+  --brandFont: 'Tapestry', cursive;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--txtColor);
+  font-family: var(--mainFont);
+}
+#root {
+  width: 100vw;
+  background-color: var(--bgColor);
+}
+
+/* Header Style */
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 2rem;
+  position: -webkit-sticky;
+  position: sticky;
+}
+.logo {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+.comp-logo {
+  font-family: var(--brandFont);
+  color: var(--txtColor);
+  font-size: 32px;
+  text-transform: uppercase;
+  letter-spacing: 1.5rem;
+}
+
+.contact {
+  height: 30px;
+  width: 100px;
+  background-color: rgb(32, 99, 216);
+  text-align: center;
+  line-height: 30px;
+  border-radius: 4px;
+  transition: 300ms all;
+}
+.contact:hover {
+  background-color: rgb(12, 84, 177);
+}
+.contact-btn {
+  color: var(--txtColor);
+}
+
+/* Hero Style */
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 8rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.content {
+  width: 40rem;
+  padding-right: 1rem;
+}
+.content h4 {
+  font-size: 26px;
+  font-family: var(--brandFont);
+  letter-spacing: .08rem;
+}
+.content p {
+  font-size: 18px;
+  letter-spacing: .13rem;
+  padding-top: 1rem;
+}
+.hero-img img {
+  height: 280px;
+}
+
+/* Games Slide Style */
+
+.gameSlide-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 15rem;
+  text-align: center;
+}
+
+.single-game-slide img {
+  height: 120px;
+}
+
+/* Main Content Style */
+
+.main-container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.main-single {
+  display: flex;
+  width: 90%;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 10rem;
+}
+
+.main-img img {
+  height: 300px;
+}
+
+.main-content {
+  width: 30rem;
+  padding-right: 1rem;
+}
+
+.main-content h4 {
+  font-size: 26px;
+  font-family: var(--brandFont);
+  letter-spacing: .08rem;
+  padding-left: 1rem;
+}
+
+.main-content p {
+  font-size: 18px;
+  letter-spacing: .13rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+
+.detail-btn {
+font-size: 18px;
+color: rgb(65, 146, 253);
+text-decoration: underline;
+}
+
+
+/* Footer Style */
+
+footer {
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: black;
+}
+
+.footer-info {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.footer-info a {
+  font-size: 18px;
+  color: var(--txtColor);
+}
+
+/* GAMES STYLE */
+
+.games-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5rem 0;
+}
+.title {
+  font-family: var(--brandFont);
+  font-size: 32px;
+  letter-spacing: .15rem;
+}
+.game-title {
+  font-family: var(--brandFont);
+  font-size: 26px;
+}
+.games-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.single-game {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding: 1rem 0 ;
+  border-bottom: 1px solid rgb(172, 172, 172);
+}
+.single-game-img {
+  width: 1200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem 0 ;
+}
+.single-game-img img {
+  height: 120px;
+  transition: 300ms all;
+}
+.single-game-img img:hover {
+  transform: scale(2);
+}
+
+.game-link {
+  color: rgb(0, 191, 255);
+}
+
+/* Contact Style */
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 70vh;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+}
+form input {
+  height: 25px;
+  width: 300px;
+  margin: 10px 0;
+  padding-left: 5px;
+}
+form input:focus {
+  font-size: 16px;
+  outline: 1px solid rgb(0, 255, 153);
+}
+form button {
+  height: 30px;
+  font-size: 16px;
+  background-color: rgb(49, 151, 235);
+  border: 0;
+  border-radius: 5px;
+  transition: 300ms all;
+}
+form button:hover {
+  background-color: rgb(0, 127, 206);
+}
+
+.mail {
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
