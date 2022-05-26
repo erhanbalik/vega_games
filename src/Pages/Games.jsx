@@ -1,21 +1,25 @@
 import gameInfo from "./GamesInfo"
+import { useTranslation } from "react-i18next"
 
 const Games = () => {
+  const { t } =useTranslation();
   return (
     <div className="games-container">
-      <h3 className="title">Our Games</h3>
+      <h3 className="title">{t ('games_title')}</h3>
       <div>
         <div className="games-info-container">
           {
             gameInfo.map((game) => (
               <div key={game.id} className='single-game'>
-                <p className="game-title">{game.name}</p>
                 <div className="single-game-img">
-                  {game.images.map((img, index) => (
-                      <img src={img} alt={game.name} key={index} />
-                  ))}
+                      <img src={game.images} alt={game.name}/>
                 </div>
-                <a href={game.link} className="game-link">Game site</a>
+                <div className="single-info">
+                  <p className="game-title">{game.name}</p>
+                  <a href={game.link} className="game-link">
+                    <img src="https://enerjianaliz.info/wp-content/uploads/2020/08/google-play-badge.png" alt="" />
+                  </a>
+                </div>
               </div>
               
             ))

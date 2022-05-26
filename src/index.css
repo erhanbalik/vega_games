@@ -13,8 +13,8 @@
 
 :root {
   /* Colors */
-  --bgColor: rgb(38, 38, 38);
-  --txtColor: #eeee;
+  --bgColor: rgb(177, 179, 180);
+  --txtColor: rgba(57, 57, 57, 0.933);
 
   /* Fonts */
   --mainFont: 'Radio Canada', sans-serif;
@@ -30,11 +30,52 @@ body {
   justify-content: center;
   color: var(--txtColor);
   font-family: var(--mainFont);
-}
-#root {
-  width: 100vw;
   background-color: var(--bgColor);
 }
+#root {
+  transition: 300ms all;
+  width: 100vw;
+  overflow-x: hidden;
+}
+/* Load Screen Style */
+.loading {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(70, 70, 70);
+  color: white;
+  font-size: 46px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: hidden;
+}
+.load-text {
+  font-family: var(--mainFont);
+          -webkit-animation: anim 1s ease-in-out;
+                  animation: anim 1s ease-in-out;
+}
+@-webkit-keyframes anim {
+  0%{
+    transform: translateY(-200%);
+    opacity: .1;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes anim {
+  0%{
+    transform: translateY(-1000%);
+    opacity: .1;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* End Load Screen Style */
 
 /* Header Style */
 
@@ -61,6 +102,22 @@ body {
   letter-spacing: 1.5rem;
 }
 
+.sideBar {
+  display: flex;
+}
+
+.lang-container {
+  display: flex;
+  flex-direction: row;
+  margin: 0 1rem;
+}
+.lang-box {
+  border: 0;
+  margin: 0 .4rem;
+  font-size: 20px;
+  background-color: transparent;
+  cursor: pointer;
+}
 .contact {
   height: 30px;
   width: 100px;
@@ -121,24 +178,26 @@ body {
 /* Main Content Style */
 
 .main-container {
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 .main-single {
   display: flex;
   width: 90%;
   align-items: center;
+  flex-direction: row;
   justify-content: space-around;
   margin-top: 10rem;
 }
 
 .main-img img {
-  height: 300px;
+  height: 200px;
 }
 
 .main-content {
@@ -170,12 +229,12 @@ text-decoration: underline;
 /* Footer Style */
 
 footer {
-  height: 20vh;
+  height: 15vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  background-color: black;
+  background-color: rgb(26, 26, 26);
 }
 
 .footer-info {
@@ -186,7 +245,7 @@ footer {
 }
 .footer-info a {
   font-size: 18px;
-  color: var(--txtColor);
+  color: rgb(137, 137, 137);
 }
 
 /* GAMES STYLE */
@@ -198,48 +257,44 @@ footer {
   justify-content: space-around;
   padding: 5rem 0;
 }
+.games-info-container {
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  justify-items: center;
+  grid-gap: 40px;
+  margin-top: 1rem;
+}
 .title {
   font-family: var(--brandFont);
   font-size: 32px;
   letter-spacing: .15rem;
 }
 .game-title {
-  font-family: var(--brandFont);
-  font-size: 26px;
-}
-.games-info-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+  font-family: var(--mainFont);
 }
 .single-game {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-around;
-  padding: 1rem 0 ;
-  border-bottom: 1px solid rgb(172, 172, 172);
-}
-.single-game-img {
-  width: 1200px;
-  display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-around;
-  padding: 2rem 0 ;
+  justify-content: center;
+  margin-top: 5rem;
 }
-.single-game-img img {
-  height: 120px;
-  transition: 300ms all;
-}
-.single-game-img img:hover {
-  transform: scale(2);
+.single-info {
+  display: flex;
+  width: 400px;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 15px;
 }
 
-.game-link {
-  color: rgb(0, 191, 255);
+.single-game-img img {
+  height: 300px;
 }
+
+.game-link img {
+  height: 40px;
+}
+
 
 /* Contact Style */
 
@@ -247,7 +302,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height: 70vh;
+  height: 80vh;
 }
 
 form{
@@ -282,4 +337,66 @@ form button:hover {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+}
+
+/* MEDIA QUERY */
+
+@media (min-width: 1300px) {
+  .main-img img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 900px) {
+  .main-single {
+    flex-direction: column;
+  }
+  .comp-brand {
+    display: none;
+  }
+  .hero-img img {
+    height: 200px;
+  }
+  .gameSlide-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .single-game-slide img {
+    height: 90px;
+    padding: 15px 0;
+  }
+  .main-single {
+    text-align: center;
+    flex-direction: column-reverse;
+  }
+  .main-single:last-child {
+    flex-direction: column;
+  }
+  .main-img img {
+    height: 250px;
+  }
+  .single-game-img img {
+    height: 150px;
+  }
+}
+@media (max-width: 600px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-img img {
+    height: 250px;
+    padding-top: 25px;
+  }
+  .games-info-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .single-game-img img {
+    height: 200px;
+  }
+  .contact-container {
+    flex-direction: column-reverse;
+  }
+  .loading {
+    font-size: 32px;
+  }
 }
