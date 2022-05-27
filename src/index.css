@@ -22,13 +22,13 @@ p {
 
 :root {
   /* Colors */
-  --bgColor: rgb(177, 179, 180);
-  --txtColor: rgba(57, 57, 57, 0.933);
+  --bgColor: rgb(207, 207, 207);
+  --txtColor: rgba(65, 65, 65, 0.933);
 
   /* Fonts */
   --mainFont: 'Poppins', sans-serif;
-  --main500: 500;
   --main300: 300;
+  --main500: 500;
   --main600: 600;
   --main700: 700;
   --main800: 800;
@@ -52,7 +52,7 @@ body {
 .loading {
   width: 100vw;
   height: 100vh;
-  background-color: rgb(70, 70, 70);
+  background-color: rgb(26, 26, 26);
   color: white;
   font-size: 46px;
   display: flex;
@@ -102,7 +102,7 @@ body {
   text-align: center;
 }
 .comp-logo {
-  color: var(--txtColor);
+  color: rgb(32, 32, 32);
   font-weight: var(--main800);
   font-size: 40px;
   text-transform: uppercase;
