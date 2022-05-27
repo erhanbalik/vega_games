@@ -1,14 +1,15 @@
 {
     "header_btn": "Contact",
     "hero_title": "Welcome Vega Games",
-    "hero_desc": "Lorem ipsum",
+    "hero_desc": "Vega games was founded in turkey in 2020. We set out as an initiative that adopts quality as our priority. We enjoy making games for people to have fun with. We are working hard to stay in the game industry for many years and make our name known.",
     "mission_title": "Our Mission",
-    "mission_desc": "Lorem ipsum",
+    "mission_desc": "As Vega games, our primary mission is to produce quality and entertaining content. To win people's attention and respect with different kinds of games that appeal to everyone's taste. Always designing better quality game content.",
     "games_title": "Games",
-    "games_desc": "Lorem ipsum",
+    "games_desc": "You can see some of our developed and published games here.",
     "games_link": "Play Store",
     "form_name": "Name",
     "form_mail": "E-Mail",
     "form_message": "Message",
-    "mail_Us": "Mail Us"
+    "mail_Us": "Mail Us",
+    "submit": "Submit"
 }

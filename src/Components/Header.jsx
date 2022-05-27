@@ -1,3 +1,4 @@
+import vegaLogo from '../Assets/V logo.png'
 // For change page
 import {Link} from 'react-router-dom'
 // Translation Text 
@@ -25,7 +26,7 @@ const Header = () => {
   return (
     <header className='header-container'>
       <div className='logo'>
-        <Link to={'/'} className='comp-logo' >V
+        <Link to={'/'} className='comp-logo' > <img src={vegaLogo} alt="" />
         </Link>
       </div>
       <div className='comp-brand'>

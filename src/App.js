@@ -2,7 +2,7 @@ import { Suspense, useEffect, useState } from 'react';
 // Route pages hook
 import {BrowserRouter} from 'react-router-dom'
 
-// Loading Screen 
+// Main Page Loading Screen 
 import FadeLoader from "react-spinners/FadeLoader";
 
 // Components
@@ -31,13 +31,13 @@ i18n
       loadPath: '/assets/locales/{{lng}}/translation.json',
     }
   });
-
+  // Loading screen for language changes
   const loadingMarkup = (
     <div className='loading'><h2>Loading...</h2></div>
   )
 
 function App() {
-
+  // Main Page Loading Screen for page opening
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {

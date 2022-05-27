@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Tapestry&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&display=swap');
 
 /* Reset */
 * {
@@ -7,6 +7,15 @@
   box-sizing: 0;
   list-style: none;
   text-decoration: none;
+}
+h4 {
+  font-size: 24px;
+  font-weight: var(--main700);
+  text-transform: uppercase;
+}
+p {
+ font-weight: var(--main300);
+ font-size: 16px;
 }
 
 /* Variables */
@@ -17,11 +26,12 @@
   --txtColor: rgba(57, 57, 57, 0.933);
 
   /* Fonts */
-  --mainFont: 'Radio Canada', sans-serif;
-  --main400: 400;
+  --mainFont: 'Poppins', sans-serif;
+  --main500: 500;
   --main300: 300;
   --main600: 600;
-  --brandFont: 'Tapestry', cursive;
+  --main700: 700;
+  --main800: 800;
 }
 
 body {
@@ -30,6 +40,7 @@ body {
   justify-content: center;
   color: var(--txtColor);
   font-family: var(--mainFont);
+  font-weight: var(--main300);
   background-color: var(--bgColor);
 }
 #root {
@@ -83,11 +94,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  margin-top: 2rem;
-  position: -webkit-sticky;
-  position: sticky;
+  margin: 2rem;
 }
 .logo {
   width: 50px;
@@ -95,11 +102,17 @@ body {
   text-align: center;
 }
 .comp-logo {
-  font-family: var(--brandFont);
   color: var(--txtColor);
-  font-size: 32px;
+  font-weight: var(--main800);
+  font-size: 40px;
   text-transform: uppercase;
-  letter-spacing: 1.5rem;
+  
+}
+.comp-logo img {
+  height: 50px;
+}
+.comp-brand {
+  margin-left: 3rem;
 }
 
 .sideBar {
@@ -131,7 +144,8 @@ body {
   background-color: rgb(12, 84, 177);
 }
 .contact-btn {
-  color: var(--txtColor);
+  color: whitesmoke;
+  font-weight: var(--main500);
 }
 
 /* Hero Style */
@@ -148,14 +162,8 @@ body {
   width: 40rem;
   padding-right: 1rem;
 }
-.content h4 {
-  font-size: 26px;
-  font-family: var(--brandFont);
-  letter-spacing: .08rem;
-}
+
 .content p {
-  font-size: 18px;
-  letter-spacing: .13rem;
   padding-top: 1rem;
 }
 .hero-img img {
@@ -206,15 +214,10 @@ body {
 }
 
 .main-content h4 {
-  font-size: 26px;
-  font-family: var(--brandFont);
-  letter-spacing: .08rem;
   padding-left: 1rem;
 }
 
 .main-content p {
-  font-size: 18px;
-  letter-spacing: .13rem;
   padding-top: 1rem;
   padding-left: 1rem;
 }
@@ -382,10 +385,25 @@ form button:hover {
   .hero-container {
     flex-direction: column;
     text-align: center;
+    
   }
   .hero-img img {
     height: 250px;
     padding-top: 25px;
+  }
+  .content {
+    inline-size: 290px;
+  }
+  .content p {
+    text-align: left;
+    overflow-wrap: break-word;
+  }
+  .main-content {
+    inline-size: 320px;
+  }
+  .main-content p {
+    overflow-wrap: break-word;
+    text-align: left;
   }
   .games-info-container {
     grid-template-columns: repeat(1, 1fr);

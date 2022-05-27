@@ -1,14 +1,15 @@
 {
     "header_btn": "Iletisim",
     "hero_title": "Vega Games'e Hosgeldin",
-    "hero_desc": "Lorem ipsum",
+    "hero_desc": "Vega games 2020 yılında türkiye'de kuruldu. kaliteyi önceliğimiz olarak benimseyen bir girişim olarak yolumuza çıktık. İnsanların eğleneceği zaman geçireceği oyunları yapmaktan zevk alıyoruz. Uzun yıllar oyun sektöründe kalmak ve adımızı duyurmak için çok çalışıyoruz.",
     "mission_title": "Misyonumuz",
-    "mission_desc": "Lorem ipsum",
+    "mission_desc": "Vega games olarak öncelikli misyonumuz kaliteli ve eğlenceli içerikler üretmek. Her insanın zevkine hitap eden farklı türde oyunları ile insanların ilgisini ve saygısını kazanmak.  Her zaman daha kaliteli oyun içerikleri tasarlamak. ",
     "games_title": "Oyunlarimiz",
-    "games_desc": "Lorem ipsum",
+    "games_desc": "Geliştirdiğimiz ve yayınlanan oyunlarımızın birkaçını buradan görebilirsiniz.",
     "games_link": "Play Store",
     "form_name": "Isim",
     "form_mail": "E-Mail",
     "form_message": "Mesajiniz",
-    "mail_Us": "Bize Ulasin"
+    "mail_Us": "Bize Ulasin",
+    "submit": "Onayla"
 }

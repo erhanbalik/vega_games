@@ -1,4 +1,5 @@
 import vegaImg from '../Assets/Vega2.png'
+import vegaLogo from '../Assets/V logo.png'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
@@ -8,7 +9,7 @@ const MainContent = () => {
     <div className='main-container'>
       <div className='main-single'>
         <div className='main-img'>
-          <img src={vegaImg} alt="VegaImage" />
+          <img src={vegaLogo} alt="VegaImage" />
         </div>
         <div className='main-content'>
           <h4>{t ('mission_title')}</h4>
